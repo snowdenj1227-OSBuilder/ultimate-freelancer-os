@@ -1,0 +1,17 @@
+name = "ultimate-freelancer-os"
+type = "javascript"
+account_id = "YOUR_ACCOUNT_ID"
+workers_dev = true
+route = ""
+zone_id = ""
+build = { command = "npm run build", cwd = "./", watch_paths = ["src/**/*.ts"] }
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "ultimate-freelancer-os-prod"
+routes = [
+  { pattern = "yourdomain.com", zone_name = "yourdomain.com" }
+]
+
+[[migrations]]
+tag = "v1"
