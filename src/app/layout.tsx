@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { RootLayoutClient } from './RootLayoutClient';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -15,8 +16,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="bg-neutral-50 dark:bg-neutral-900">
         <div className="flex">
-          {/* Sidebar will be loaded client-side */}
-          <div id="sidebar-root" />
+          <RootLayoutClient />
           <main className="flex-1 ml-64 transition-all duration-300">
             <div className="min-h-screen">
               {children}
